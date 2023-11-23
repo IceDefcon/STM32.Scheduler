@@ -17,6 +17,7 @@ ASM_SOURCES = $(shell find . -name "*.s")
 GCC_SOURCES = $(shell find . -name "*.c")
 
 INCLUDES=\
+	-IApp/Inc\
 	-ICore/Inc\
 	-IDrivers/CMSIS/Include\
 	-IDrivers/STM32F1xx_HAL_Driver/Inc\
