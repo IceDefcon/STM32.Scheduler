@@ -5,6 +5,8 @@
 
 # TODO
 
+	1. Install UART Drivers
+	2. Connect to x86 Application for CTRL
 	1. Need timer for the Scheduler
 	2. IO Interfaces :: For PHY comms
 	3. Prototype Architecure
