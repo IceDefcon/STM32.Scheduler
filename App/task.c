@@ -6,10 +6,14 @@
  */
 #include "main.h"
 
-uint8_t charToTransmit[1];
+
+
+
 
 void iceNET_Task(void)
 {
+
+	uint8_t transmitCharacter[1];
 
 	UART_HandleTypeDef uart_console; // Declare the UART handle
 
@@ -26,7 +30,7 @@ void iceNET_Task(void)
 	// Initialize the UART peripheral with the configured settings
 	HAL_UART_Init(&uart_console);
 
-	charToTransmit[0] = 48;
+	transmitCharacter[0] = 48;
 
 	while (1)
 	{
@@ -35,9 +39,9 @@ void iceNET_Task(void)
 		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
 
 
-		HAL_UART_Transmit(&uart_console, charToTransmit, 1, 100);
+		HAL_UART_Transmit(&uart_console, transmitCharacter, 1, 100);
 
-		charToTransmit[0]++;
+		transmitCharacter[0]++;
 
 		HAL_Delay(100);
 	}
